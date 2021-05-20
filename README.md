@@ -24,3 +24,8 @@ Now that we've installed pyenv, we can begin installing python itself. We are cu
 pyenv install 3.9.5
 pyenv global 3.9.5
 ```
+Now that python3 is all setup, let's install pipx to manage our python packages. Run the following lines of code:
+```bash
+python3 -m pip install --user pipx
+python3 -m pipx ensurepath
+```
