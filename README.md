@@ -15,15 +15,9 @@ Then we can install pyenv using the installer script from [pyenv-install](https:
 ```
 curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
 ```
-Finally, we can make the following changes to our .profile so pyenv is initialized when the terminal is opened: 
+Finally, we can run the following code to edit our .bashrc and add code to initalized pyenv when our terminal starts up:
 ```bash
-# set PATH so it includes PyEnv bin
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-
-# start PyEnv
-eval "$(pyenv init --path)"
-eval "$(pyenv virtualenv-init -)"
+echo -e '# set PATH so it includes PyEnv bin\nexport PYENV_ROOT="$HOME/.pyenv"\nexport PATH="$PYENV_ROOT/bin:$PATH"\n\n# initalized pyenv\neval "$(pyenv init --path)"\neval "$(pyenv init -)"\n' >> ~/.bashrc
 ```
 Now that we've installed pyenv, we can begin installing python itself. We are currently using python 3.9.5 for this project. We can install python 3.9.5 using the code bellow:
 ```bash
