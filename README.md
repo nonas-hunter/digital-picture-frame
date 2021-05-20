@@ -25,3 +25,8 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv virtualenv-init -)"
 ```
+Now that we've installed pyenv, we can begin installing python itself. We are currently using python 3.9.5 for this project. We can install python 3.9.5 using the code bellow:
+```bash
+pyenv install 3.9.5
+pyenv global 3.9.5
+```
