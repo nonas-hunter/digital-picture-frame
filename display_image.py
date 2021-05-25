@@ -1,3 +1,5 @@
+"""Display image in full screen using Pillow & Tkinter."""
+
 import tkinter
 from PIL import Image, ImageTk
 
